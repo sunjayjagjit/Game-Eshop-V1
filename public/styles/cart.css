@@ -1,0 +1,26 @@
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #534340;
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+  border-radius: var(--border-radius-small);
+}
+
+.cart-item h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.cart-item input {
+  font: inherit;
+  padding: var(--space-2);
+  border-radius: var(--border-radius-small);
+}
+
+@media (min-width: 48rem) {
+  .cart-item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

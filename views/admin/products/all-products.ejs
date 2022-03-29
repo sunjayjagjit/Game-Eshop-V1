@@ -1,0 +1,34 @@
+<%- include('../../base/includes/head', {pageTitle:'Add New Products'}) %>
+
+    <link rel="stylesheet" href="/styles/products.css">
+    <script src="/scripts/product-management.js" defer></script>
+
+    </head>
+
+    <body>
+        <%- include('../../base/includes/header') %>
+            <main>
+                <h1>All Products (ADMIN)</h1>
+
+                <section>
+                    <h2>Product Management</h2>
+                    <p>
+                        <a href="/admin/products/new" class="btn">Add Product</a>
+                    </p>
+                </section>
+
+                <section>
+                        <p>A list of Game and E gaming</p>
+                        <ul id="products-grid">
+                            <% for (const product of products) { %>
+                            <li>
+                                <%- include('../../base/includes/product-item', { product: product }) %>
+                            </li>
+                            <% } %>
+                        </ul>
+                </section>
+                
+          
+
+            </main>
+            <%- include('../../base/includes/footer') %>

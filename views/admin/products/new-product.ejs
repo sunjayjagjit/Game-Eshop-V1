@@ -1,0 +1,20 @@
+<%- include('../../base/includes/head', {pageTitle:'All Products'}) %>
+    <script src="/scripts/image-preview.js" defer></script>
+
+    </head>
+
+    <body>
+        <%- include('../../base/includes/header') %>
+            <main>
+                <h1>Add New Products (ADMIN)</h1>
+                   
+                <%- include('includes/product-form', {submitPath: '/admin/products', product:{
+                    title:'',
+                    summary:'',
+                    price:'',
+                    description:''
+                },
+                imageRequired:true }) %>
+
+            </main>
+            <%- include('../../base/includes/footer') %>
